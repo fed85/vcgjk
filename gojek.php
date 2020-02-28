@@ -55,7 +55,7 @@ if ($register == false)
             next:
             $claim = claim1($verif);
             if ($claim == true) {
-                echo "\e[92m[!]".$claim['true'][0]['message']."\y";
+                echo "\e[92m[!]".$claim['true'][1]['message']."\y";
                 sleep(3);
                 echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\y";
                 sleep(3);
@@ -71,7 +71,7 @@ if ($register == false)
             next1:
             $claim = claim2($verif);
             if ($claim == true) {
-                echo "\e[92m[!]".$claim['true'][0]['message']."y";
+                echo "\e[92m[!]".$claim['true'][1]['message']."y";
                 sleep(3);
                 echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\y";
                 sleep(3);
@@ -79,23 +79,23 @@ if ($register == false)
             }
           else
             {
-            echo "\e[92m[+] ".$claim . "\y";
+            echo "\e[92m[+] ".$claim . "\n";
             sleep(3);
-            echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\y";
+            echo "\e[93m[!] redeem Voucher : GOFOOD022620A !\y";
             sleep(3);
             goto ride;
             }
             ride:
             $claim = ride($verif);
             if ($claim == true ) {
-                echo "\e[92m[!]".$claim['errors'][0]['message']."\y";
+                echo "\e[92m[!]".$claim['true'][1]['message']."\y";
                 sleep(3);
                 echo "\e[93m[!] Trying to redeem Voucher : COBAGORIDE !\y";
                 sleep(3);
 
             }
             else{
-                echo "\e[92m[+] ".$claim."\y";
+                echo "\e[92m[+] ".$claim."\n";
                 sleep(3);
                 echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\y";
                 sleep(3);
@@ -104,10 +104,10 @@ if ($register == false)
             pengen:
             $claim = cekvocer($verif);
             if ($claim == true ) {
-                echo "\033 VOUCHER VALID/BERHASIL REDEEM\y";
+                echo "\033 VOUCHER VALID/BERHASIL REDEEM\n";
             }
             else{
-                echo "\e[92m[+] ".$claim."\y";
+                echo "\e[92m[+] ".$claim."\n";
                 
         }
     }
