@@ -10,7 +10,7 @@ $header[] = "X-AppVersion: 3.30.2";
 $header[] = "X-UniqueId: ".time()."57".mt_rand(1000,9999);
 $header[] = "Connection: keep-alive";
 $header[] = "X-User-Locale: en_ID";
-$header[] = "X-Location: -6.246265,106.690718";
+$header[] = "X-Location: -6.118114,106.690718";
 $header[] = "X-Location-Accuracy: 3.0";
 if ($pin):
 $header[] = "pin: $pin";
@@ -205,7 +205,7 @@ function claim($token)
     }
      function cekvocer($token)
     {
-    $data = '{"promo_code":"COBAGOCAR"}';    
+    $data = '{"promo_code":"GOFOOD022620A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
