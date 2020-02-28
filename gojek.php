@@ -75,7 +75,7 @@ if ($register == false)
                 sleep(3);
                 echo "\e[93m[!] Trying to redeem Voucher : GOFOOD022620A !\y";
                 sleep(3);
-                goto else;
+                goto ride;
             }
           else
             {
