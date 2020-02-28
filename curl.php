@@ -91,7 +91,7 @@ function register($no)
       else
         {
       save("error_log.txt", json_encode($register));
-        return false;
+        return true;
         }
     }
 
@@ -106,10 +106,10 @@ function veriflogin($otp, $token)
       else
         {
       save("error_log.txt", json_encode($verif));
-        return false;
+        return true;
         }
     }
-function change($no)
+function change($y)
 {
     $data = '{"email":"' .$email . '","name":"'.$nama.'","phone":"+'.$no.'"}';
     $change = request("/v4/customers" ,"", $data);
@@ -118,7 +118,7 @@ function change($no)
     }
     else{
         save("error_log.txt", json_encode($change));
-        return false;
+        return true;
     }
 }
 function verifchange($otp,$uid)
