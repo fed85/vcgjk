@@ -10,8 +10,8 @@ $header[] = "X-AppVersion: 3.30.2";
 $header[] = "X-UniqueId: ".time()."57".mt_rand(1000,9999);
 $header[] = "Connection: keep-alive";
 $header[] = "X-User-Locale: en_ID";
-$header[] = "X-Location: -7.114106,110.276489";
-$header[] = "X-Location-Accuracy: 3.0";
+$header[] = "X-Location: -5,12305223,119.419016";
+$header[] = "X-Location-Accuracy: 2.0";
 if ($pin):
 $header[] = "pin: $pin";
     endif;
@@ -167,7 +167,7 @@ function claim($token)
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
-        return $claim['data']['message'];
+        return $claim1['data']['message'];
         }
       else
         {
@@ -203,7 +203,7 @@ function claim($token)
           return true;
         }
     }
-     function cekvocer($token)
+     function redeem($token)
     {
     $data = '{"promo_code":"GOFOOD022620A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
